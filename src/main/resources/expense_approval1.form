@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "label": "报销内容",
+      "type": "textfield",
+      "id": "Field_12g1kum",
+      "key": "content",
+      "description": "钱花哪去了？",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "多少钱(元）",
+      "type": "textfield",
+      "id": "Field_1ja47gk",
+      "key": "money",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_1ink4as"
+}

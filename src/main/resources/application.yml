@@ -1,0 +1,56 @@
+server:
+  port: 8080 #流程引擎端口
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /fs
+    register-default-servlet: true
+spring:
+  application:
+    name: camunda-demo-service
+  jersey:
+    application-path: /engine-rest #REST接口地址
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/camunda #流程引擎数据库
+    username: Administrator
+    password: 123
+    tomcat:
+      max-idle: 10
+      max-wait: 10000
+      min-idle: 5
+      initial-size: 5
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 18800
+  datasource-emis:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/emis #流程引擎数据库
+    username: Administrator
+    password: 123
+    tomcat:
+      max-idle: 10
+      max-wait: 10000
+      min-idle: 5
+      initial-size: 5
+      validation-query: SELECT 1
+      test-on-borrow: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 18800
+
+camunda.bpm:
+  admin-user:
+    id: demo
+    password: demo
+    firstName: Demo
+  filter:
+    create: All tasks
+
+camunda.bpm.eventing.execution: true
+camunda.bpm.eventing.history: true
+camunda.bpm.eventing.task: true
+
+logging.level.root: info
+logging.level.org.springframework.web: info
+logging.level.org.apache: info

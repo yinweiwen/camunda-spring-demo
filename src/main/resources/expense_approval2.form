@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "components": [
+    {
+      "values": [
+        {
+          "value": "agree",
+          "label": "同意"
+        },
+        {
+          "label": "驳回",
+          "value": "reject"
+        }
+      ],
+      "label": "审批",
+      "type": "radio",
+      "id": "Field_0rsnewb",
+      "key": "approve",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "报销内容",
+      "type": "textfield",
+      "id": "Field_12g1kum",
+      "key": "content",
+      "description": "钱花哪去了？",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "多少钱(元）",
+      "type": "textfield",
+      "id": "Field_1ja47gk",
+      "key": "money",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "Form_1c5o6fy"
+}
